@@ -1,0 +1,104 @@
+@import url('https://fonts.cdnfonts.com/css/8bit-wonder');
+
+
+body{ 
+    background-color: rgb(33, 64, 64);
+}
+.cir{ 
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+}
+
+.e-bit{ 
+    font-family: '8BIT WONDER', sans-serif;
+    color: white;
+    font-size: 3.3vmax;
+}
+
+
+
+.logo.is-animetion {
+    margin-top: 0.6em;
+  }
+.white{ 
+    color: white; 
+}
+.nav-b{
+    display: inline-block;
+    
+    float: right; 
+
+}
+
+.intro{
+    text-align: center;
+    font-size: 3.0vmin;
+}
+.top-buff{
+  position: relative;
+  top: -37px;
+
+}
+
+  
+.logo.is-animetion span {
+    display: inline-block;
+    animation: wave-text 1s ease-in-out infinite;
+}
+  
+.logo.is-animetion {
+    span:nth-of-type(1){ animation-delay: 0.0s; }
+    span:nth-of-type(2){ animation-delay: 0.1s; }
+    span:nth-of-type(3){ animation-delay: 0.2s; }
+    span:nth-of-type(4){ animation-delay: 0.3s; }
+    span:nth-of-type(5){ animation-delay: 0.4s; }
+  }
+  
+  @keyframes wave-text{
+    00%{
+      transform: translateY(0em);
+    }
+    60%{
+      transform: translateY(-0.6em);
+    }
+    100%{
+      transform: translateY(0em);
+    }
+  }
+  @media only screen and (max-width: 1199px) {
+    
+    .mid{ 
+      
+      
+      align-items: center;
+    }
+    .e-bitt{ 
+      font-family: '8BIT WONDER', sans-serif;
+      color: white;
+      font-size: 18px; 
+  }
+  .top-buff{
+    display: none;
+  }
+    
+  }
+  @media only screen and (max-width: 720px) {
+    .image {
+      display: none;
+    }
+    .mid{ 
+      
+      
+      align-items: center;
+    }
+    .e-bitt{ 
+      font-family: '8BIT WONDER', sans-serif;
+      color: white;
+      font-size: 18px; 
+  }
+  .top-buff{
+    display: none;
+  }
+    
+  }
