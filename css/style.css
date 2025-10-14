@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/8bit-wonder');
 
+:root {
+    --card-bg: rgba(24, 27, 40, 0.92);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-hover: rgba(34, 37, 52, 0.98);
+    --section-bg: rgba(9, 14, 27, 0.85);
+    --section-border: rgba(148, 163, 184, 0.16);
+    --accent: #f6c343;
+    --text-muted: rgba(226, 232, 240, 0.75);
+}
 
 body{ 
     
@@ -8,7 +18,210 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    color: #eef2ff;
+    font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
     
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.section-panel {
+    background: var(--section-bg);
+    border: 1px solid var(--section-border);
+    border-radius: 1.25rem;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    padding: 3rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 55%);
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.section-panel h2 {
+    font-family: '8BIT WONDER', sans-serif;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    font-size: clamp(1.8rem, 2vw, 2.4rem);
+}
+
+.section-panel p {
+    color: var(--text-muted);
+}
+
+.card.bg-dark {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.card.bg-dark:hover {
+    background: var(--card-hover) !important;
+    transform: translateY(-6px);
+    box-shadow: 0 18px 30px rgba(15, 23, 42, 0.35);
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-body ul li {
+    color: var(--text-muted);
+}
+
+.btn.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.65);
+    color: #f8fafc;
+}
+
+.btn.btn-outline-light:hover, .btn.btn-outline-light:focus {
+    background: var(--accent);
+    color: #1a1f36;
+    border-color: var(--accent);
+}
+
+.section-panel .badge {
+    box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.35), 0 8px 18px rgba(15, 23, 42, 0.45);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.card-body {
+    width: 100%;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#projects .card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 356px;
+    display: block;
+}
+
+#projects ul {
+    padding-left: 1rem;
+}
+
+#projects ul li {
+    margin-bottom: 0.5rem;
+}
+
+#projects .card {
+    border-radius: 0.75rem;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 10;
+}
+
+.scroll-down {
+    margin-top: -40px;
+    margin-bottom: 40px;
+    animation: bounce 2s infinite;
+}
+
+.scroll-text {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.scroll-arrow {
+    font-size: 2rem;
+    display: block;
+    animation: bounceArrow 1.5s infinite;
+}
+
+@keyframes bounceArrow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@media (max-width: 576px) {
+    #projects .card-img-top {
+        height: auto;
+        max-height: 240px;
+    }
+}
+
+.coming-soon-toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background: rgba(255, 255, 255, 0.85);
+    color: #0f172a;
+    padding: 1.15rem 2.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(15, 23, 42, 0.15);
+    box-shadow: 0 25px 50px rgba(15, 23, 42, 0.35), 0 0 0 1px rgba(15, 23, 42, 0.08);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1080;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    backdrop-filter: blur(8px);
+}
+
+.coming-soon-toast.show {
+    transform: translate(-50%, -50%);
+    opacity: 1;
 }
 .cir{ 
     border-radius: 50%;
@@ -131,6 +344,16 @@ body{
 @media (max-width: 768px) {
   .project-content {
       padding: 1rem;
+  }
+
+  .project-content img {
+      max-height: 40vh;
+      object-fit: contain;
+      margin-bottom: 1.5rem;
+  }
+
+  .project {
+      padding: 2rem 0;
   }
 
   .header nav a {

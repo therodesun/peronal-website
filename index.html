@@ -13,114 +13,6 @@
     <link rel="stylesheet" href="./css/style.css">
 
     <title> Wittawat Chailiab </title>
-    <style>
-        .card-body {
-            width: 100%;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .icon {
-            width: 32px;
-            height: 32px;
-        }
-
-        #projects .card-img-top {
-            object-fit: cover;
-            width: 100%;
-            height: 356px;
-        }
-
-        #projects .card {
-            border-radius: 0.75rem;
-        }
-
-        #projects ul {
-            padding-left: 1rem;
-        }
-
-        #projects ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .hero-section {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        #projects .card:hover {
-            transform: scale(1.02);
-            transition: transform 0.3s ease;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: -1;
-        }
-
-        #backToTop {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            z-index: 10;
-        }
-
-        .scroll-down {
-            margin-top: -40px;
-            margin-bottom: 40px;
-            animation: bounce 2s infinite;
-        }
-
-        .scroll-text {
-            font-size: 1rem;
-            letter-spacing: 1px;
-        }
-
-        .scroll-arrow {
-            font-size: 2rem;
-            display: block;
-            animation: bounceArrow 1.5s infinite;
-        }
-
-        @keyframes bounceArrow {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(10px);
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -185,18 +77,19 @@
     </div>
 
 
-    <section id="projects" class="container py-5 mb-3">
-        <h2 class="text-white text-center mb-2 fade-in">Projects</h2>
-        <p class="text-center text-muted mb-3 fade-in">A showcase of the work I've built with passion and purpose</p>
-        <div class="text-center mb-3 fade-in">
+    <section id="projects" class="py-5 mb-4">
+        <div class="container section-panel">
+            <h2 class="text-white text-center mb-2 fade-in">Projects</h2>
+            <p class="text-center text-muted mb-3 fade-in">A showcase of the work I've built with passion and purpose</p>
+            <div class="text-center mb-3 fade-in">
 
-        </div>
+            </div>
 
-        <div class="row g-4">
+            <div class="row g-4">
 
                 <div class="col-md-6 mb-3">
                 <div class="card bg-dark text-white h-100">
-                    <img src="./images/anime.png" class="card-img-top" alt="GreenStone Living Foundation">
+                    <img src="./images/anime.png" class="card-img-top" alt="Animefy.io animated preview">
                     <div class="card-body">
                         <h5 class="card-title">Animefy.io</h5>
                         <ul>
@@ -217,7 +110,7 @@
 
             <div class="col-md-6 mb-3">
                 <div class="card bg-dark text-white h-100">
-                    <img src="./images/linkler.png" class="card-img-top" alt="GreenStone Living Foundation">
+                    <img src="./images/linkler.png" class="card-img-top" alt="Linkler job matching dashboard preview">
                     <div class="card-body">
                         <h5 class="card-title">Linkler</h5>
                         <ul>
@@ -238,9 +131,7 @@
 
             <div class="col-md-6 mb-3">
                 <div class="card bg-dark text-white h-100">
-                    <div class="ratio ratio-16x9">
-                       <img src="./images/nft.png" class="card-img-top" alt="GreenStone Living Foundation">
-                    </div>
+                    <img src="./images/nft.png" class="card-img-top img-fluid" alt="Virtual Student NFT">
                     <div class="card-body">
                         <h5 class="card-title">Virtual Student NFT</h5>
                         <ul>
@@ -255,7 +146,7 @@
                             <span class="badge" style="background-color:#00cec9;">Flask</span>
                             <span class="badge" style="background-color:#f0db4f; color:#000;">JavaScript</span>
                         </div>
-                        <a href="#" class="btn btn-outline-light mt-2" target="_blank">View Code</a>
+                        <a href="#" class="btn btn-outline-light mt-2" target="_blank" data-coming-soon="true" data-label="Virtual Student NFT">View Code</a>
                     </div>
                 </div>
             </div>
@@ -263,9 +154,7 @@
 
             <div class="col-md-6 mb-3">
                 <div class="card bg-dark text-white h-100">
-                    <div class="ratio ratio-16x9">
-                        <img src="./images/z-sim.png" class="card-img-top" alt="Z-Sim">
-                    </div>
+                    <img src="./images/z-sim.png" class="card-img-top img-fluid" alt="Z-Sim blockchain simulator interface">
                     <div class="card-body">
                         <h5 class="card-title">Z-Sim: A Blockchain Simulator</h5>
                         <ul>
@@ -280,7 +169,7 @@
                             <span class="badge" style="background-color:#61dafb; color:#222;">React</span>
                             <span class="badge" style="background-color:#ef5b25;">Postman</span>
                         </div>
-                        <a href="#" class="btn btn-outline-light mt-2" target="_blank">View Code</a>
+                        <a href="#" class="btn btn-outline-light mt-2" target="_blank" data-coming-soon="true" data-label="Z-Sim code">View Code</a>
                     </div>
                 </div>
             </div>
@@ -303,7 +192,7 @@
                             <span class="badge" style="background-color:#61dafb; color:#222;">React</span>
                             <span class="badge" style="background-color:#ffca28; color:#000;">Firebase</span>
                         </div>
-                        <a href="#" class="btn btn-outline-light mt-2" target="_blank">View Code</a>
+                        <a href="#" class="btn btn-outline-light mt-2" target="_blank" data-coming-soon="true" data-label="In Class demo">View Code</a>
                     </div>
                 </div>
             </div>
@@ -323,7 +212,7 @@
                             <span class="badge" style="background-color:#e44d26;">HTML/CSS</span>
                             <span class="badge" style="background-color:#00cec9;">Flask</span>
                         </div>
-                        <a href="#" class="btn btn-outline-light mt-2" target="_blank">View Code</a>
+                        <a href="#" class="btn btn-outline-light mt-2" target="_blank" data-coming-soon="true" data-label="GreenStone Living Foundation">View Code</a>
                     </div>
                 </div>
             </div>
@@ -349,11 +238,12 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </section>
 
-    <section id="skills" class="text-white pt-3 pb-5 ">
-        <div class="container">
+    <section id="skills" class="py-5">
+        <div class="container section-panel text-white">
             <h2 class="text-center mb-3">Skills</h2>
             <h5 class="text-center mt-4">Frontend</h5>
             <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
@@ -457,12 +347,33 @@
 
 
     <button id="backToTop" class="btn btn-warning">↑</button>
+    <div id="comingSoonToast" class="coming-soon-toast" role="status" aria-live="polite">
+        <span class="toast-text">More details coming soon.</span>
+    </div>
     <script>
         const btn = document.getElementById('backToTop');
         window.onscroll = () => {
             btn.style.display = window.scrollY > 300 ? 'block' : 'none';
         };
         btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        const placeholders = document.querySelectorAll('[data-coming-soon="true"]');
+        const toast = document.getElementById('comingSoonToast');
+        const toastText = toast.querySelector('.toast-text');
+        let toastTimeout;
+
+        placeholders.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const label = link.dataset.label || 'This content';
+                toastText.textContent = `${label} is coming soon.`;
+                toast.classList.add('show');
+                clearTimeout(toastTimeout);
+                toastTimeout = setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2500);
+            });
+        });
     </script>
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
